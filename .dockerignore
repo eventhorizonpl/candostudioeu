@@ -1,0 +1,6 @@
+**/.dockerignore
+**/.git/
+**/.gitattributes
+**/.gitignore
+.editorconfig
+node_modules

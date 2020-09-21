@@ -6,5 +6,5 @@ COPY ./ ./
 RUN npm run build-prod
 
 FROM nginx:stable-alpine
-COPY ./conf/default.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist/candostudioeu/ /usr/share/nginx/html
