@@ -1,6 +1,6 @@
 FROM node:lts-alpine AS builder
 WORKDIR '/app'
-COPY package.json package-lock.json yarn.lock ./
+COPY package.json package-lock.json ./
 RUN npm install
 COPY angular.json karma.conf.js tsconfig.app.json tsconfig.json tsconfig.spec.json ./
 COPY src src/
